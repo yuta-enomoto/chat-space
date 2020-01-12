@@ -61,7 +61,7 @@ _ has_many: messages
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |group_id|references|foreign_key: true|
 |user_id|references|foreign_key: true|
