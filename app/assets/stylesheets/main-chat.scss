@@ -1,0 +1,132 @@
+.main-chat {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: $whitecolor;
+
+  &__main-header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eeeeee;
+
+    &__left-box {
+      margin-top: 35px;
+
+      h2 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+
+        li {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    a {
+      color: $chat-main-blue;
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $chat-main-blue;
+      position: absolute;
+      right: 40px;
+      text-decoration: none;
+      }
+   
+  }
+
+  &__messages {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+
+    &__message {
+      padding-bottom: 40px;
+
+      &__upper-info {
+        display: flex;
+        margin-bottom: 10px;
+
+        &__talker {
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+
+      &__text {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+
+  &__form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #dddddd;
+
+    &__new-message {
+      display: flex;
+
+      &__input-box {
+        width: 100%;
+        position: relative;
+
+        &__input-text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
+        &__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 13px;
+          right: 10px;
+          cursor: pointer;
+
+          &fa {
+            display: inline-block;
+            font-size: inherit;
+            text-rendering: auto;
+          }
+
+          &__file{
+            display: none;
+          }
+        }
+      }
+      &__submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $chat-main-blue;
+        color: $whitecolor;
+        cursor: pointer;
+      }
+    }
+  }
+}
