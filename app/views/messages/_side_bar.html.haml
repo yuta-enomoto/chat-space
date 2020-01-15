@@ -1,13 +1,14 @@
 .side-bar__header
   .side-bar__header__box
-    %p.side-bar__header__box__user-name yuta
+    %p.side-bar__header__box__user-name 
+      = current_user.name
     %ul.side-bar__header__box__menue-list
       %li.side-bar__header__box__menue-list__new-group
         = link_to 'http://google.co.jp' do
           %i.fas.fa-edit
       %li.side-bar__header__box__menue-list__edit-user
-        = link_to'http://google.co.jp' do
-          %i.fas.fa-cog
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
 
 .side-bar__groups-list
   .side-bar__groups-list__group
