@@ -1,0 +1,36 @@
+.main-chat__main-header
+  .main-chat__main-header__left-box
+    %h2.main-header__left-box__current-group 
+      ヤ
+    %ul.main-header__left-box__member-list 
+      Member : 
+      %li.left-box__current-group__member-list__member yuta
+  %a{:href => "http://google.co.jp"}
+    .main-chat__main-header__edit-btn Edit
+
+.main-chat__messages
+  .main-chat__messages__message
+    .main-chat__messages__message__upper-info
+      %p.main-chat__messages__message__upper-info__talker yuta
+      %p.main-chat__messages__message__upper-info__date 2020/01/14(Tue) 20:07:10
+    %p.main-chat__messages__message__text aaa
+  .main-chat__messages__message
+    .main-chat__messages__message__upper-info
+      %p.main-chat__messages__message__upper-info__talker yuta
+      %p.main-chat__messages__message__upper-info__date 2020/01/14(Tue) 20:07:10
+    %p.main-chat__messages__message__text aaa
+  .main-chat__messages__message
+    .main-chat__messages__message__upper-info
+      %p.main-chat__messages__message__upper-info__talker yuta
+      %p.main-chat__messages__message__upper-info__date 2020/01/14(Tue) 20:07:10
+    %p.main-chat__messages__message__text aaa
+
+
+.main-chat__form
+  %form.main-chat__form__new-message
+    .main-chat__form__new-message__input-box
+      %input.main-chat__form__new-message__input-box__input-text{:placeholder => "type a message", :type => "text"}
+      %label.main-chat__form__new-message__input-box__image{:for => "message_image"}
+        %i.fa.fa-image
+        %input#message_image.main-chat__form__new-message__input-box__image__file{:name => "message[image]", :type => "file"}/
+    %input.main-chat__form__new-message__submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
