@@ -1,6 +1,6 @@
 .main-chat {
-  height: 100vh;
   width: calc(100vw - 300px);
+  float: left;
   background-color: $whitecolor;
 
   &__main-header {
@@ -86,48 +86,48 @@
     padding: 20px 40px;
     background-color: #dddddd;
 
-    &__new-message {
+    
+    form {
       display: flex;
+    } 
 
-      &__message {
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: #434a54;
-        border-style: none;
-      }
+    &__message {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+    }
 
-      &__mask {
-        width: 100%;
-        position: relative;
-        
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 13px;
-          right: 10px;
-          cursor: pointer;
+    &__mask {
+      position: relative;
 
-          &icon {
-            display: inline-block;
-            font-size: inherit;
-            text-rendering: auto;
-          }
+      &__image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        cursor: pointer;
 
-          &__hidden{
-            display: none;
-          }
+        &icon {
+          display: inline-block;
+          font-size: inherit;
+          text-rendering: auto;
+        }
+        &__hidden{
+          display: none;
         }
       }
-      &__submit {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $chat-main-blue;
-        color: $whitecolor;
-        cursor: pointer;
-      }
     }
+    &__submit {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $chat-main-blue;
+      color: $whitecolor;
+      cursor: pointer;
+    }
+    
   }
 }
