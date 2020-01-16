@@ -27,10 +27,19 @@
 
 
 .main-chat__form
-  %form.main-chat__form__new-message
-    .main-chat__form__new-message__input-box
-      %input.main-chat__form__new-message__input-box__input-text{placeholder: "type a message", type: "text"}
-      %label.main-chat__form__new-message__input-box__image{for: "message_image"}
-        %i.fa.fa-image
-        %input#message_image.main-chat__form__new-message__input-box__image__file{name: "message[image]", type: "file"}/
-    %input.main-chat__form__new-message__submit-btn{name: "commit", type: "submit", value: "Send"}/
+  = form_for class: "form__new-message" [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
+
+
+  -# %form.main-chat__form__new-message
+  -#   .main-chat__form__new-message__input-box
+  -#     %input.main-chat__form__new-message__input-box__input-text{placeholder: "type a message", type: "text"}
+  -#     %label.main-chat__form__new-message__input-box__image{for: "message_image"}
+  -#       %i.fa.fa-image
+  -#       %input#message_image.main-chat__form__new-message__input-box__image__file{name: "message[image]", type: "file"}/
+  -#   %input.main-chat__form__new-message__submit-btn{name: "commit", type: "submit", value: "Send"}/

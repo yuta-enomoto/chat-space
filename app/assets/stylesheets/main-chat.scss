@@ -89,17 +89,18 @@
     &__new-message {
       display: flex;
 
-      &__input-box {
+      &__message {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+
+      &__mask {
         width: 100%;
         position: relative;
-
-        &__input-text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
+        
         &__image{
           font-size: 1.3rem;
           position: absolute;
@@ -107,18 +108,18 @@
           right: 10px;
           cursor: pointer;
 
-          &fa {
+          &icon {
             display: inline-block;
             font-size: inherit;
             text-rendering: auto;
           }
 
-          &__file{
+          &__hidden{
             display: none;
           }
         }
       }
-      &__submit-btn {
+      &__submit {
         width: 100px;
         height: 50px;
         padding: 0 30px;
