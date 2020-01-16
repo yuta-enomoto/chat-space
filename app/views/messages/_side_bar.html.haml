@@ -4,20 +4,17 @@
       = current_user.name
     %ul.side-bar__header__box__menue-list
       %li.side-bar__header__box__menue-list__new-group
-        = link_to 'http://google.co.jp' do
+        = link_to new_group_path do
           %i.fas.fa-edit
       %li.side-bar__header__box__menue-list__edit-user
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
 
 .side-bar__groups-list
-  .side-bar__groups-list__group
-    %p.side-bar__groups-list__group__group-name グループ名
-    %p.side-bar__groups-list__group__latest-message まだメッセージはありません
-  .side-bar__groups-list__group
-    %p.side-bar__groups-list__group__group-name グループ名
-    %p.side-bar__groups-list__group__latest-message まだメッセージはありません
-  .side-bar__groups-list__group
-    %p.side-bar__groups-list__group__group-name グループ名
-    %p.side-bar__groups-list__group__latest-message まだメッセージはありません
-       
+  - current_user.groups.each do |group|
+    .group
+      = link_to '#' do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
