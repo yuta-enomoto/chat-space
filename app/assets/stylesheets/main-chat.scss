@@ -1,7 +1,6 @@
 .main-chat {
-  height: 100vh;
   width: calc(100vw - 300px);
-  background-color: $whitecolor;
+  float: left;
 
   &__main-header {
     height: 100px;
@@ -51,15 +50,16 @@
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
+    overflow: scroll;
 
     &__message {
       padding-bottom: 40px;
 
-      &__upper-info {
+      &__upper-message {
         display: flex;
         margin-bottom: 10px;
 
-        &__talker {
+        &__user-name {
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
@@ -72,12 +72,11 @@
         }
       }
 
-      &__text {
+      &__lower-message {
         color: #434a54;
         font-size: 14px;
         margin-bottom: 10px;
       }
-
     }
   }
 
@@ -86,47 +85,85 @@
     padding: 20px 40px;
     background-color: #dddddd;
 
-    &__new-message {
+    form {
       display: flex;
+      width: 100%;
+    }
 
-      &__input-box {
-        width: 100%;
-        position: relative;
+    &__message {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+    }
 
-        &__input-text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 13px;
-          right: 10px;
-          cursor: pointer;
+    &__mask {
+      position: relative;
 
-          &fa {
-            display: inline-block;
-            font-size: inherit;
-            text-rendering: auto;
-          }
-
-          &__file{
-            display: none;
-          }
-        }
-      }
-      &__submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $chat-main-blue;
-        color: $whitecolor;
+      &__image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
         cursor: pointer;
+
+        &icon{
+          display: inline-block;
+          font-size: inherit;
+          text-rendering: auto;
+        }
+        &__hidden{
+          display: none;
+        }
       }
+    }
+    &__submit {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
     }
   }
 }
+
+
+
+
+      //   &__input-text {
+      //     height: 50px;
+      //     width: 100%;
+      //     padding: 0 40px 0 10px;
+      //     color: #434a54;
+      //     border-style: none;
+      //   }
+      //   &__image{
+      //     font-size: 1.3rem;
+      //     position: absolute;
+      //     top: 13px;
+      //     right: 10px;
+      //     cursor: pointer;
+
+      //     &fa {
+      //       display: inline-block;
+      //       font-size: inherit;
+      //       text-rendering: auto;
+      //     }
+
+      //     &__file{
+      //       display: none;
+      //     }
+      //   }
+      // }
+      // &__submit-btn {
+      //   width: 100px;
+      //   height: 50px;
+      //   padding: 0 30px;
+      //   margin-left: 15px;
+      //   background-color: $chat-main-blue;
+      //   color: $whitecolor;
+      //   cursor: pointer;
+      // }

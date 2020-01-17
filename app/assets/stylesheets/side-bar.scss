@@ -1,7 +1,7 @@
 .side-bar {
-  height: 100vh;
   width: 300px;
-  background-color: $side-main-color;
+  color: $side-main-color;
+  float: left;
 
   &__header {
     background-color: $side-main-color;
