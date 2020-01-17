@@ -1,22 +1,17 @@
 .main-chat__main-header
   .main-chat__main-header__left-box
     %h2.main-header__left-box__current-group 
-      ヤ
+      =@group.name
     %ul.main-header__left-box__member-list 
       Member : 
-      %li.left-box__current-group__member-list__member yuta
+      - @group.users.each do |user|
+        %li.main-header__left-box__menber-list__name
+          =user.name
   = link_to "#" do
     .main-chat__main-header__edit-btn Edit
 
 .main-chat__messages
   = render @messages
-
-  -# .main-chat__messages__message
-  -#   .main-chat__messages__message__upper-info
-  -#     %p.main-chat__messages__message__upper-info__talker yuta
-  -#     %p.main-chat__messages__message__upper-info__date 2020/01/14(Tue) 20:07:10
-  -#   %p.main-chat__messages__message__text aaa
-
 
 .main-chat__form
   = form_for [@group, @message] do |f|
