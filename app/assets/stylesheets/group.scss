@@ -90,18 +90,60 @@ li {
     clear: both;
     display: block;
   }
-  &__name {
+
+  .chat-group-user__name {
     float: left;
   }
-  &__btn {
+
+  .chat-group-user__btn {
     float: right;
     display: inline-block;
     cursor: pointer;
-    &--add {
+
+    &.chat-group-user__btn--add {
       color: #38aef0;
     }
-    &--remove {
+
+    &.chat-group-user__btn--remove {
       color: #f05050;
     }
   }
+}
+
+.chat-group-member {
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    .chat-group-user__name {
+      float: left;
+    }
+
+    .chat-group-user__btn {
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+
+      &.chat-group-user__btn--add {
+        color: #38aef0;
+      }
+
+      &.chat-group-user__btn--remove {
+        color: #f05050;
+      }
+    }
+}
+
+.chat-group-form__action-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #38aef0;
+  border: 0;
 }
